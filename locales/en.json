@@ -1,0 +1,24 @@
+{
+  "tabs": {
+    "home": "Home",
+    "search": "Search",
+    "bag": "Bag",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  },
+  "screens": {
+    "root": {
+      "index": {"title":"root welcome page","explor_app": "Explore App"}
+    },
+    "(tabs)": {
+      "index": {"title":"tabs home page"},
+      "search": {"title":"search page"},
+      "bag": {"title":"bag page"},
+      "notifications": {"title":"notifications page"},
+      "profile": {
+        "index": {"title":"profile page"},
+        "details": { "index": {}, "orders": { "index": {}, "details": {} } }
+      }
+    }
+  }
+}

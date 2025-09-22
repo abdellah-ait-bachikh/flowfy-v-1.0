@@ -1,0 +1,30 @@
+{
+  "tabs": {
+    "home": "Accueil",
+    "search": "Recherche",
+    "bag": "Panier",
+    "notifications": "Notifications",
+    "profile": "Profil"
+  },
+ "screens": {
+    "root": {
+      "index": {"title": "Page d'accueil principale","explor_app": "Explorer l'application"}
+    },
+    "(tabs)": {
+      "index": {"title": "Page d'accueil des onglets"},
+      "search": {"title": "Page de recherche"},
+      "bag": {"title": "Page du panier"},
+      "notifications": {"title": "Page des notifications"},
+      "profile": {
+        "index": {"title": "Page de profil"},
+        "details": { 
+          "index": {"title": "Détails du profil"},
+          "orders": { 
+            "index": {"title": "Commandes"},
+            "details": {"title": "Détails de la commande"} 
+          }
+        }
+      }
+    }
+  }
+}

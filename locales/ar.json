@@ -1,0 +1,33 @@
+{
+  "tabs": {
+    "home": "الرئيسية",
+    "search": "بحث",
+    "bag": "السلة",
+    "notifications": "الإشعارات",
+    "profile": "حسابي"
+  },
+  "screens": {
+    "root": {
+      "index": {
+        "title": "الصفحة الرئيسية الترحيبية",
+        "explor_app": "استكشف التطبيق"
+      }
+    },
+    "(tabs)": {
+      "index": { "title": "الصفحة الرئيسية للألسنة" },
+      "search": { "title": "صفحة البحث" },
+      "bag": { "title": "صفحة الحقيبة" },
+      "notifications": { "title": "صفحة الإشعارات" },
+      "profile": {
+        "index": { "title": "صفحة الملف الشخصي" },
+        "details": {
+          "index": { "title": "تفاصيل الملف" },
+          "orders": {
+            "index": { "title": "الطلبات" },
+            "details": { "title": "تفاصيل الطلب" }
+          }
+        }
+      }
+    }
+  }
+}
