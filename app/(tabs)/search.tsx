@@ -60,6 +60,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.gray,
     borderRadius: 10,
   },
-  input_search: { paddingHorizontal: 20 ,fontFamily: "SpaceMono"},
+  input_search: { paddingHorizontal: 20 ,fontFamily: "SpaceMonoSemiBold"},
 });
 export default Search;

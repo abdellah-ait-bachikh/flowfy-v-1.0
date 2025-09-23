@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   Animated,
   Easing,
+  I18nManager,
   Image,
   StyleSheet,
   Text,
@@ -44,6 +45,8 @@ const index = () => {
   const handleChangeLanguage = (lang: string) => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
+    I18nManager.forceRTL(lang==='ar'); // or false
+
   };
 
   return (
@@ -52,6 +55,7 @@ const index = () => {
         selectedValue={language}
         onValueChange={handleChangeLanguage}
         style={[styles.picker, { top: insets.top }]}
+        i18nIsDynamicList
       >
         <Picker.Item label="English" value="en" style={{fontFamily:"SpaceMonoMedium"}} />
         <Picker.Item label="Français" value="fr" style={{fontFamily:"SpaceMonoMedium"}} />

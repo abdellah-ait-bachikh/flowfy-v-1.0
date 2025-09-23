@@ -31,7 +31,7 @@ const Header = () => {
         <View
           style={[
             styles.wrapper,
-            { flexDirection: isRTL ? "row-reverse" : "row" },
+          
           ]}
         >
           <View>
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     height: 70,
-    paddingHorizontal: 10,
+    paddingHorizontal: 10,flexDirection: "row"
   },
   btn_back: {
     padding: 10,

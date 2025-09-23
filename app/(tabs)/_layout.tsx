@@ -30,6 +30,7 @@ export default function TabLayout() {
     >
       <Header />
       <Tabs
+    
         initialRouteName="index"
         key={i18n.language} // <- add this line
         screenOptions={{
