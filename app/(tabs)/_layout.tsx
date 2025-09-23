@@ -18,13 +18,13 @@ export default function TabLayout() {
     <LinearGradientCmp
       colors={[
         colors.light_yellow,
+
         colors.white,
         colors.white,
         colors.white,
-        colors.white,
-        colors.white,
-        colors.white,
-        
+       
+      
+
         colors.gray,
       ]}
     >
@@ -74,7 +74,13 @@ export default function TabLayout() {
                     <Feather
                       size={28}
                       name="home"
-                      color={ focused ? focused ? colors.light_red :colors.gray_300 :colors.gray_300}
+                      color={
+                        focused
+                          ? focused
+                            ? colors.light_red
+                            : colors.gray_300
+                          : colors.gray_300
+                      }
                     />
                   ),
                 }}
@@ -98,7 +104,7 @@ export default function TabLayout() {
                     <AntDesign
                       size={28}
                       name="search"
-                      color={ focused ? colors.light_red :colors.gray_300}
+                      color={focused ? colors.light_red : colors.gray_300}
                     />
                   ),
                 }}
@@ -122,7 +128,7 @@ export default function TabLayout() {
                     <Feather
                       size={28}
                       name="shopping-cart"
-                      color={ focused ? colors.light_red :colors.gray_300}
+                      color={focused ? colors.light_red : colors.gray_300}
                     />
                   ),
                 }}
@@ -146,7 +152,7 @@ export default function TabLayout() {
                     <Ionicons
                       size={28}
                       name="notifications-outline"
-                      color={ focused ? colors.light_red :colors.gray_300}
+                      color={focused ? colors.light_red : colors.gray_300}
                     />
                   ),
                 }}
@@ -170,7 +176,7 @@ export default function TabLayout() {
                     <Octicons
                       size={28}
                       name="person"
-                      color={ focused ? colors.light_red :colors.gray_300}
+                      color={focused ? colors.light_red : colors.gray_300}
                     />
                   ),
                 }}

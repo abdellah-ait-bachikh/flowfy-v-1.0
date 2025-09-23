@@ -53,9 +53,9 @@ const index = () => {
         onValueChange={handleChangeLanguage}
         style={[styles.picker, { top: insets.top }]}
       >
-        <Picker.Item label="English" value="en" />
-        <Picker.Item label="Français" value="fr" />
-        <Picker.Item label="العربية" value="ar" />
+        <Picker.Item label="English" value="en" style={{fontFamily:"SpaceMonoMedium"}} />
+        <Picker.Item label="Français" value="fr" style={{fontFamily:"SpaceMonoMedium"}} />
+        <Picker.Item label="العربية" value="ar" style={{fontFamily:"SpaceMonoMedium"}} />
       </Picker>
 
       <Image
@@ -121,7 +121,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: colors.black,
     letterSpacing: 1,
-    fontWeight: "700",
   },
   shine: {
     position: "absolute",

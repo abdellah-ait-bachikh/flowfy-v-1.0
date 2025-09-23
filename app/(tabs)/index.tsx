@@ -81,7 +81,9 @@ const Index = () => {
         ]}
       >
         <View>
-          <AppText>{t("screens.(tabs).index.categories")}</AppText>
+          <AppText style={styles.horizontal_scroll_container_title}>
+            {t("screens.(tabs).index.categories")}
+          </AppText>
         </View>
         <ScrollView
           horizontal
@@ -120,7 +122,12 @@ const Index = () => {
                 <AppText style={styles.horizontal_scroll_card_body_title}>
                   {card.name}
                 </AppText>
-                <AppText style={[styles.horizontal_scroll_card_body_description,{textAlign:i18n.language === "ar" ? "right" : "left"}]}>
+                <AppText
+                  style={[
+                    styles.horizontal_scroll_card_body_description,
+                    { textAlign: i18n.language === "ar" ? "right" : "left" },
+                  ]}
+                >
                   {card.description}
                 </AppText>
               </View>
@@ -142,6 +149,7 @@ const styles = StyleSheet.create({
   },
   input_search: { paddingHorizontal: 20, fontFamily: "SpaceMono" },
   horizontal_scroll_container: { padding: 20, overflow: "hidden", gap: 5 },
+  horizontal_scroll_container_title: { fontFamily: "SpaceMonoBold" },
   horizontal_scroll: {
     height: 120,
     flexDirection: "row",
@@ -158,7 +166,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: colors.gray,
+    borderColor: colors.gray_100,
   },
   card_img: {
     width: 60,
@@ -166,7 +174,14 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   horizontal_scroll_card_body: { flex: 1, gap: 5 },
-  horizontal_scroll_card_body_title: { fontSize: 20, fontWeight: "700" },
-  horizontal_scroll_card_body_description: { fontSize: 10, fontWeight: "500", },
+  horizontal_scroll_card_body_title: {
+    fontSize: 22,
+    fontFamily: "SpaceMonoSemiBold",
+  },
+  horizontal_scroll_card_body_description: {
+    fontSize: 10,
+    fontFamily: "SpaceMonoSemiBold",
+    color: colors.gray_300,
+  },
 });
 export default Index;

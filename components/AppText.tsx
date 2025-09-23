@@ -4,7 +4,7 @@ import { Text, TextProps } from "react-native";
 
 export default function AppText(props: TextProps) {
   return (
-    <Text {...props} style={[{ fontFamily: "SpaceMono" }, props.style]}>
+    <Text {...props} style={[{ fontFamily: "SpaceMonoMedium" }, props.style]}>
       {props.children}
     </Text>
   );

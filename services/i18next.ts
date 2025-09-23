@@ -15,7 +15,7 @@ export const LanguageResources: Resource = {
 };
 
 export async function initI18next() {
-  let lng = "ar"; // default language is French
+  let lng = "en"; // default language is French
 
   try {
     const savedLang = await AsyncStorage.getItem("user-language");
@@ -31,7 +31,7 @@ export async function initI18next() {
     .init({
       compatibilityJSON: "v4",
       lng,
-      fallbackLng: "ar",
+      fallbackLng: "en",
       resources: LanguageResources,
       interpolation: {
         escapeValue: false,

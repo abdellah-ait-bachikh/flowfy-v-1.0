@@ -8,10 +8,17 @@ import LinearGradientCmp from "@/components/ui/LinearGradientCmp";
 import { colors } from "@/constants/colors";
 
 export default function RootLayout() {
-  const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SUSEMono-Regular.ttf"),
-  });
-
+  
+const [loaded] = useFonts({
+  SpaceMonoThin: require("../assets/fonts/SUSEMono-Thin.ttf"),
+  SpaceMonoExtraLight: require("../assets/fonts/SUSEMono-ExtraLight.ttf"),
+  SpaceMonoLight: require("../assets/fonts/SUSEMono-Light.ttf"),
+  SpaceMono: require("../assets/fonts/SUSEMono-Regular.ttf"),
+  SpaceMonoMedium: require("../assets/fonts/SUSEMono-Medium.ttf"),
+  SpaceMonoSemiBold: require("../assets/fonts/SUSEMono-SemiBold.ttf"),
+  SpaceMonoBold: require("../assets/fonts/SUSEMono-Bold.ttf"),
+  SpaceMonoExtraBold: require("../assets/fonts/SUSEMono-ExtraBold.ttf"),
+});
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
