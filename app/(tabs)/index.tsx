@@ -1,23 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
-import { colors } from "@/constants/colors";
+import { useTranslation } from "react-i18next";
 
-const index = () => {
+const Index = () => {
+  const { t } = useTranslation();
+ 
+
   return (
-    <View style={styles.container}>
-      <Text>index zddsssssssssssssssssss</Text>
-    </View>
+   <ScrollView style={{ display: "flex",backgroundColor: "transparent" ,flex:1, }}>
+      <Text>{t("screens.(tabs).index.title")}</Text>
+   </ScrollView>
   );
 };
 
-export default index;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    color:colors.gray,
-    backgroundColor:"white"
-  },
-});
+export default Index;

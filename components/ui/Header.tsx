@@ -52,16 +52,16 @@ const Header = () => {
           </View>
           <View>
             <Pressable
-              onPress={(handleBack=>{})}
+              onPress={(handleBack) => {}}
               style={{
                 padding: 10,
                 justifyContent: "center",
                 alignItems: "center",
                 // backgroundColor:"#ffffffff",
-                borderRadius:"50%"
+                borderRadius: "50%",
               }}
             >
-            <Entypo name="location" size={25} color="black" />
+              <Entypo name="location" size={25} color="black" />
             </Pressable>
           </View>
         </View>

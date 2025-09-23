@@ -28,7 +28,7 @@ export const AnimatedTabLabel = ({
     // 👇 collapse height when not focused
     height: focused ? "auto" : 0,
     fontSize: 10,
-    color: focused ? colors.black : colors.gray,
+    color:  colors.red ,
     marginTop: focused ? 5 : 0,
   }));
 
