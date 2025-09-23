@@ -14,7 +14,21 @@
       "index": {
         "title": "tabs home page",
         "btn_search_placehaulder": "Search for food, products, or more...",
-        "categories":"Categories"
+        "categories": "Categories",
+        "horizental_scroll": {
+          "name": {
+            "restaurant": "Restaurant",
+            "supermarket": "Supermarket",
+            "pharmacy": "Pharmacy",
+            "custom": "Custom"
+          },
+          "description": {
+            "restaurant": "Fast food & meals",
+            "supermarket": "Groceries, staples, fruits & vegetables",
+            "pharmacy": "Medicines & health products",
+            "custom": "Specialized orders"
+          }
+        }
       },
       "search": {
         "title": "search page",

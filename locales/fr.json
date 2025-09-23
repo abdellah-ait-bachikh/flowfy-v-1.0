@@ -17,7 +17,21 @@
       "index": {
         "title": "Page d'accueil des onglets",
         "btn_search_placehaulder": "Rechercher des plats ou produits...",
-        "categories": "Catégories"
+        "categories": "Catégories",
+        "horizental_scroll": {
+          "name": {
+            "restaurant": "Restaurant",
+            "supermarket": "Supermarché",
+            "pharmacy": "Pharmacie",
+            "custom": "Commande spéciale"
+          },
+          "description": {
+            "restaurant": "Restauration rapide et repas",
+            "supermarket": "Épicerie, produits de base, fruits et légumes",
+            "pharmacy": "Médicaments et produits de santé",
+            "custom": "Commandes personnalisées"
+          }
+        }
       },
       "search": {
         "title": "Page de recherche",

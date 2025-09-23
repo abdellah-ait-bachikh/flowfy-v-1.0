@@ -9,7 +9,7 @@ import { colors } from "@/constants/colors";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    SpaceMono: require("../assets/fonts/SUSEMono-Regular.ttf"),
   });
 
   const [ready, setReady] = useState(false);

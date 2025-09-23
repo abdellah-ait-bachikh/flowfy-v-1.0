@@ -17,7 +17,21 @@
       "index": {
         "title": "الصفحة الرئيسية للألسنة",
         "btn_search_placehaulder": "ابحث عن طعام أو منتجات أو أي شيء آخر...",
-        "categories": "الفئات"
+        "categories": "الفئات",
+        "horizental_scroll": {
+          "name": {
+            "restaurant": "مطعم",
+            "supermarket": "سوبرماركت",
+            "pharmacy": "صيدلية",
+            "custom": "طلب خاص"
+          },
+          "description": {
+            "restaurant": "وجبات سريعة وطعام",
+            "supermarket": "المواد الغذائية، البقالة، الخضار والفواكه",
+            "pharmacy": "الأدوية ومنتجات الصحة",
+            "custom": "طلبات مخصصة"
+          }
+        }
       },
       "search": {
         "title": "صفحة البحث",

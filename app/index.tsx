@@ -16,6 +16,7 @@ import { useTranslation } from "react-i18next";
 import { useRouter } from "expo-router";
 import { Dimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import AppText from "@/components/AppText";
 const index = () => {
   const { t, i18n } = useTranslation("");
   const router = useRouter();
@@ -51,7 +52,6 @@ const index = () => {
         selectedValue={language}
         onValueChange={handleChangeLanguage}
         style={[styles.picker, { top: insets.top }]}
-        
       >
         <Picker.Item label="English" value="en" />
         <Picker.Item label="Français" value="fr" />
@@ -70,9 +70,9 @@ const index = () => {
         style={styles.btn}
         onPress={() => router.push("/(tabs)")}
       >
-        <Text style={styles.btn_text}>
+        <AppText style={styles.btn_text}>
           {t("screens.root.index.explor_app")}
-        </Text>
+        </AppText>
         <Animated.View
           style={[
             styles.shine,
@@ -121,13 +121,14 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: colors.black,
     letterSpacing: 1,
+    fontWeight: "700",
   },
   shine: {
     position: "absolute",
     top: 0,
     bottom: 0,
-    width: 60, 
-    backgroundColor: colors.gray, 
+    width: 60,
+    backgroundColor: colors.gray,
     opacity: 0.5,
     borderRadius: 20,
   },

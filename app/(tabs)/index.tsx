@@ -5,17 +5,60 @@ import {
   Pressable,
   TextInput,
   StyleSheet,
+  Image,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { colors } from "@/constants/colors";
-import { useRouter } from "expo-router";
-
+import { Link, useRouter } from "expo-router";
+import restaurant_logo from "@/assets/images/icons/restaurant.png";
+import supermarket_logo from "@/assets/images/icons/supermarket.png";
+import pharmacy_logo from "@/assets/images/icons/pharmacy.png";
+import custom_logo from "@/assets/images/icons/custom.png";
+import AppText from "@/components/AppText";
 const Index = () => {
   const { t, i18n } = useTranslation();
   const router = useRouter();
-  const cards = ["Card 1", "Card 2", "Card 3"];
   // Reverse the array for Arabic
+  const cards = [
+    {
+      id: 1,
+      name: t("screens.(tabs).index.horizental_scroll.name.restaurant"),
+      description: t(
+        "screens.(tabs).index.horizental_scroll.description.restaurant"
+      ),
+      image: restaurant_logo,
+      href: "restaurant",
+    },
+    {
+      id: 2,
+      name: t("screens.(tabs).index.horizental_scroll.name.supermarket"),
+      description: t(
+        "screens.(tabs).index.horizental_scroll.description.supermarket"
+      ),
+      image: supermarket_logo,
+      href: "supermarket",
+    },
+    {
+      id: 3,
+      name: t("screens.(tabs).index.horizental_scroll.name.pharmacy"),
+      description: t(
+        "screens.(tabs).index.horizental_scroll.description.pharmacy"
+      ),
+      image: pharmacy_logo,
+      href: "pharmacy",
+    },
+    {
+      id: 4,
+      name: t("screens.(tabs).index.horizental_scroll.name.custom"),
+      description: t(
+        "screens.(tabs).index.horizental_scroll.description.custom"
+      ),
+      image: custom_logo,
+      href: "custom",
+    },
+  ] as const;
   return (
     <ScrollView style={styles.container}>
       <View style={styles.btn_searach_container}>
@@ -38,7 +81,7 @@ const Index = () => {
         ]}
       >
         <View>
-          <Text>{t("screens.(tabs).index.categories")}</Text>
+          <AppText>{t("screens.(tabs).index.categories")}</AppText>
         </View>
         <ScrollView
           horizontal
@@ -46,24 +89,42 @@ const Index = () => {
             styles.horizontal_scroll,
             // { flexDirection: i18n.language === "ar" ? "row-reverse" : "row" },
           ]}
-          contentContainerStyle={{
-            flexDirection: i18n.language === "ar" ? "row-reverse" : "row",
-          }}
+          // contentContainerStyle={{
+          //   flexDirection: i18n.language === "ar" ? "row-reverse" : "row",
+          // }}
           showsHorizontalScrollIndicator={false}
         >
-          {cards.map((card, index) => (
-            <View
-              key={index}
+          {cards.map((card) => (
+            <TouchableOpacity
+              activeOpacity={0.4}
+              key={card.id}
               style={[
                 styles.horizontal_scroll_card,
                 {
                   marginRight: i18n.language === "ar" ? 0 : 15,
                   marginLeft: i18n.language === "ar" ? 15 : 0,
+                  flexDirection: i18n.language === "ar" ? "row-reverse" : "row",
                 },
               ]}
             >
-              <Text>{card}</Text>
-            </View>
+              <Image source={card.image} style={styles.card_img} />
+              <View
+                style={[
+                  styles.horizontal_scroll_card_body,
+                  {
+                    alignItems:
+                      i18n.language === "ar" ? "flex-end" : "flex-start",
+                  },
+                ]}
+              >
+                <AppText style={styles.horizontal_scroll_card_body_title}>
+                  {card.name}
+                </AppText>
+                <AppText style={[styles.horizontal_scroll_card_body_description,{textAlign:i18n.language === "ar" ? "right" : "left"}]}>
+                  {card.description}
+                </AppText>
+              </View>
+            </TouchableOpacity>
           ))}
         </ScrollView>
       </View>
@@ -79,7 +140,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.gray,
     borderRadius: 10,
   },
-  input_search: { paddingHorizontal: 20 },
+  input_search: { paddingHorizontal: 20, fontFamily: "SpaceMono" },
   horizontal_scroll_container: { padding: 20, overflow: "hidden", gap: 5 },
   horizontal_scroll: {
     height: 120,
@@ -87,13 +148,25 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   horizontal_scroll_card: {
-    width: 200, // fixed width for horizontal scrolling
+    width: 250,
     height: 120,
-    backgroundColor: colors.gray,
-
-    justifyContent: "center",
+    backgroundColor: colors.gray_50,
+    justifyContent: "flex-start",
+    gap: 15,
+    padding: 15,
     alignItems: "center",
+    flexDirection: "row",
     borderRadius: 10,
+    borderWidth: 2,
+    borderColor: colors.gray,
   },
+  card_img: {
+    width: 60,
+    height: 60,
+    resizeMode: "contain",
+  },
+  horizontal_scroll_card_body: { flex: 1, gap: 5 },
+  horizontal_scroll_card_body_title: { fontSize: 20, fontWeight: "700" },
+  horizontal_scroll_card_body_description: { fontSize: 10, fontWeight: "500", },
 });
 export default Index;

@@ -10,6 +10,7 @@ import React, { useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { colors } from "@/constants/colors";
 import { useFocusEffect } from "@react-navigation/native";
+import AppText from "@/components/AppText";
 
 const Search = () => {
   const { t, i18n } = useTranslation();
@@ -40,11 +41,12 @@ const Search = () => {
                 writingDirection: i18n.language === "ar" ? "rtl" : "ltr",
               },
             ]}
+            
             placeholder={t("screens.(tabs).search.btn_search_placehaulder")}
             // autoFocus={true}
           />
         </View>
-        <Text>{t("screens.(tabs).search.title")} </Text>
+        <AppText>{t("screens.(tabs).search.title")} </AppText>
       </View>
     </ScrollView>
   );
@@ -58,6 +60,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.gray,
     borderRadius: 10,
   },
-  input_search: { paddingHorizontal: 20 },
+  input_search: { paddingHorizontal: 20 ,fontFamily: "SpaceMono"},
 });
 export default Search;
