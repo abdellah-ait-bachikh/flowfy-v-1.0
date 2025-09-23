@@ -14,8 +14,15 @@
       }
     },
     "(tabs)": {
-      "index": { "title": "الصفحة الرئيسية للألسنة" },
-      "search": { "title": "صفحة البحث" },
+      "index": {
+        "title": "الصفحة الرئيسية للألسنة",
+        "btn_search_placehaulder": "ابحث عن طعام أو منتجات أو أي شيء آخر...",
+        "categories": "الفئات"
+      },
+      "search": {
+        "title": "صفحة البحث",
+        "btn_search_placehaulder": "ابحث عن طعام أو منتجات أو أي شيء آخر..."
+      },
       "bag": { "title": "صفحة الحقيبة" },
       "notifications": { "title": "صفحة الإشعارات" },
       "profile": {

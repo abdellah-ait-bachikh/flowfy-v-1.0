@@ -19,7 +19,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 const index = () => {
   const { t, i18n } = useTranslation("");
   const router = useRouter();
-  const [language, setLanguage] = useState(i18n.language || "en");
+  const [language, setLanguage] = useState(i18n.language || "ar");
   const shineAnim = useRef(new Animated.Value(-1)).current;
   const insets = useSafeAreaInsets();
   const screenWidth = Dimensions.get("window").width;
@@ -51,6 +51,7 @@ const index = () => {
         selectedValue={language}
         onValueChange={handleChangeLanguage}
         style={[styles.picker, { top: insets.top }]}
+        
       >
         <Picker.Item label="English" value="en" />
         <Picker.Item label="Français" value="fr" />
@@ -103,6 +104,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 60,
     position: "absolute",
+    color: colors.black,
   },
 
   logo: { resizeMode: "contain" },
@@ -124,8 +126,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     bottom: 0,
-    width: 60, // width of the shine
-    backgroundColor: colors.gray, // red with some transparency
+    width: 60, 
+    backgroundColor: colors.gray, 
     opacity: 0.5,
     borderRadius: 20,
   },

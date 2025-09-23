@@ -6,22 +6,32 @@
     "notifications": "Notifications",
     "profile": "Profil"
   },
- "screens": {
+  "screens": {
     "root": {
-      "index": {"title": "Page d'accueil principale","explor_app": "Explorer l'application"}
+      "index": {
+        "title": "Page d'accueil principale",
+        "explor_app": "Explorer l'application"
+      }
     },
     "(tabs)": {
-      "index": {"title": "Page d'accueil des onglets"},
-      "search": {"title": "Page de recherche"},
-      "bag": {"title": "Page du panier"},
-      "notifications": {"title": "Page des notifications"},
+      "index": {
+        "title": "Page d'accueil des onglets",
+        "btn_search_placehaulder": "Rechercher des plats ou produits...",
+        "categories": "Catégories"
+      },
+      "search": {
+        "title": "Page de recherche",
+        "btn_search_placehaulder": "Rechercher des plats ou produits..."
+      },
+      "bag": { "title": "Page du panier" },
+      "notifications": { "title": "Page des notifications" },
       "profile": {
-        "index": {"title": "Page de profil"},
-        "details": { 
-          "index": {"title": "Détails du profil"},
-          "orders": { 
-            "index": {"title": "Commandes"},
-            "details": {"title": "Détails de la commande"} 
+        "index": { "title": "Page de profil" },
+        "details": {
+          "index": { "title": "Détails du profil" },
+          "orders": {
+            "index": { "title": "Commandes" },
+            "details": { "title": "Détails de la commande" }
           }
         }
       }

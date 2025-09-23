@@ -8,15 +8,22 @@
   },
   "screens": {
     "root": {
-      "index": {"title":"root welcome page","explor_app": "Explore App"}
+      "index": { "title": "root welcome page", "explor_app": "Explore App" }
     },
     "(tabs)": {
-      "index": {"title":"tabs home page"},
-      "search": {"title":"search page"},
-      "bag": {"title":"bag page"},
-      "notifications": {"title":"notifications page"},
+      "index": {
+        "title": "tabs home page",
+        "btn_search_placehaulder": "Search for food, products, or more...",
+        "categories":"Categories"
+      },
+      "search": {
+        "title": "search page",
+        "btn_search_placehaulder": "Search for food, products, or more..."
+      },
+      "bag": { "title": "bag page" },
+      "notifications": { "title": "notifications page" },
       "profile": {
-        "index": {"title":"profile page"},
+        "index": { "title": "profile page" },
         "details": { "index": {}, "orders": { "index": {}, "details": {} } }
       }
     }
