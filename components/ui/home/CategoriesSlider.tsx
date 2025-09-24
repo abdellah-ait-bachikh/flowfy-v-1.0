@@ -1,111 +1,104 @@
-import { Image, ScrollView, StyleSheet, View } from 'react-native';
-import React, { useCallback, useState } from 'react';
-import { colors } from '@/constants/colors';
-import AppText from '@/components/AppText';
-import { TouchableOpacity } from 'react-native';
-import { cards } from '@/constants/data';
-import { useTranslation } from 'react-i18next';
-import { useFocusEffect } from '@react-navigation/native';
+import { View, Text, Image, StyleSheet, Dimensions } from "react-native";
+import React from "react";
+import { useSharedValue } from "react-native-reanimated";
+import Carousel from "react-native-reanimated-carousel";
+import { categories, restaurantSliderData } from "@/constants/data";
+import defaultRestauranLogo from "@/assets/images/icons/default_restaurant.png";
+import { colors } from "@/constants/colors";
+import { useTranslation } from "react-i18next";
+import AppText from "@/components/AppText";
 
 const CategoriesSlider = () => {
-  const { t, i18n } = useTranslation();
-
-  const [data, setData] = useState(cards);
-
-  useFocusEffect(
-    useCallback(() => {
-      // 👉 refresh data each time this component gains focus
-      // const refreshed = i18n.language !== 'fr' ? cards : [...cards].reverse();
-      // setData(refreshed);
-
-      // also scroll reset if needed
-      console.log('CategoriesSlider refreshed on focus');
-
-      return () => {
-        // optional cleanup
-      };
-    }, [i18n.language])
-  );
+  const progress = useSharedValue<number>(0);
+  const window = Dimensions.get("window");
+  const { i18n, t } = useTranslation("");
+  const isRTL = i18n.language === "ar";
 
   return (
-    <View style={styles.horizontal_scroll_container}>
-      <View>
-        <AppText style={styles.horizontal_scroll_container_title}>
-          {t('screens.(tabs).index.categories')}
-        </AppText>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.header_title}>
+          {t(`screens.(tabs).index.horizontal_categories_scroll.title`)}
+        </Text>
       </View>
-
-      <ScrollView
-       i18nIsDynamicList={false}
-        horizontal
-        style={styles.horizontal_scroll}
-        showsHorizontalScrollIndicator={false}
-      >
-        {data.map((card) => (
-          <TouchableOpacity
-            activeOpacity={0.4}
-            key={card.id}
-            style={[
-              styles.horizontal_scroll_card,
-              {
-                marginRight: 15,
-              },
-            ]}
-          >
-            <Image source={card.image} style={styles.card_img} />
-            <View style={styles.horizontal_scroll_card_body}>
-              <AppText style={styles.horizontal_scroll_card_body_title}>
-                {t(`screens.(tabs).index.horizental_scroll.name.${card.name}`)}
-              </AppText>
-              <AppText style={styles.horizontal_scroll_card_body_description}>
-                {t(
-                  `screens.(tabs).index.horizental_scroll.description.${card.name}`
-                )}
-              </AppText>
+      <View style={styles.scroll_container}>
+        <Carousel
+          // loop={true}
+          width={window.width-30}
+          height={150}
+          pagingEnabled
+          snapEnabled
+          mode="parallax"
+          modeConfig={{
+            parallaxScrollingScale: 1,
+            parallaxScrollingOffset: 80,
+          }}
+          containerStyle={{ width: "100%", height: 100 }}
+          i18nIsDynamicList
+          onProgressChange={progress}
+          renderItem={({ item, index }) => (
+            <View style={[styles.item, { width: window.width * 0.65 }]}>
+              <Image
+                source={item.image || defaultRestauranLogo}
+                style={styles.image}
+              />
+              <View style={styles.card_body}>
+                <AppText style={styles.title}>
+                  {t(
+                    `screens.(tabs).index.horizontal_categories_scroll.name.${item.name}`
+                  )}
+                </AppText>
+                <AppText style={styles.description}>
+                  {t(
+                    `screens.(tabs).index.horizontal_categories_scroll.description.${item.name}`
+                  )}
+                </AppText>
+              </View>
             </View>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+          )}
+          data={categories}
+        />
+      </View>
+      <Text>{t(
+                    `screens.(tabs).index.horizontal_categories_scroll.name.${"custom"}`
+                  )}</Text>
     </View>
   );
 };
 
 export default CategoriesSlider;
 
-const styles = StyleSheet.create({ horizontal_scroll_container: { padding: 10, overflow: "hidden", gap: 5, marginTop:10},
-  horizontal_scroll_container_title: {
-    fontFamily: "SpaceMonoBold",
+const styles = StyleSheet.create({
+  container: { marginTop: 10, gap: 5 },
+  header: {},
+  header_title: { fontFamily: "SpaceMonoBold" },
+  scroll_container: {
+    // justifyContent: "center",
+    // alignItems: "center",
+    width: "100%",
   },
-  horizontal_scroll: {
-    height: 120,
-    flexDirection: "row",
-    gap: 10,
-  },
-  horizontal_scroll_card: {
-    width: 250,
-    height: 120,
-    backgroundColor: colors.gray_50,
-    justifyContent: "flex-start",
-    gap: 15,
-    padding: 15,
+  item: {
     alignItems: "center",
+    justifyContent: "flex-start",
+    gap: 20,
+    borderRadius: 20,
     flexDirection: "row",
-    borderRadius: 10,
+    backgroundColor: colors.gray_50,
     borderWidth: 2,
     borderColor: colors.gray_100,
+    overflow: "hidden",
+    height: 100,
+    padding: 10,
   },
-  card_img: {
-    width: 60,
-    height: 60,
+  image: {
+    width: 50,
+    height: 50,
     resizeMode: "contain",
+    borderRadius: 15,
   },
-  horizontal_scroll_card_body: { flex: 1, gap: 5 },
-  horizontal_scroll_card_body_title: {
-    fontSize: 22,
-    fontFamily: "SpaceMonoSemiBold",
+  card_body: { flex: 1, flexDirection: "column", alignItems: "flex-start" },
+  title: {
+    fontSize: 20,
   },
-  horizontal_scroll_card_body_description: {
-    fontSize: 10,
-    fontFamily: "SpaceMonoSemiBold",
-    color: colors.gray_300,
-  },})
+  description: { fontSize: 13, color: colors.gray_300 },
+});

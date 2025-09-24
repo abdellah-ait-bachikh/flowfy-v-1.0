@@ -1,4 +1,3 @@
-// components/ui/AnimatedTabItem.tsx
 import { colors } from "@/constants/colors";
 import React, { useEffect } from "react";
 import Animated, {
@@ -25,7 +24,7 @@ export const AnimatedTabLabel = ({
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ scale: scale.value }],
     opacity: opacity.value,
-    // 👇 collapse height when not focused
+
     height: focused ? "auto" : 0,
     fontSize: 10,
     color:  colors.red ,

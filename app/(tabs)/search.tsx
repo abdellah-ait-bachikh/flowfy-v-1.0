@@ -30,8 +30,8 @@ const Search = () => {
   );
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.btn_searach_container}>
-        <View style={styles.btn_searach}>
+      <View style={styles.input_searach_container}>
+        <View style={styles.input_searach}>
           <TextInput
             ref={inputRef}
             style={[
@@ -54,8 +54,8 @@ const Search = () => {
 
 const styles = StyleSheet.create({
   container: { display: "flex", backgroundColor: "transparent", flex: 1 },
-  btn_searach_container: { paddingHorizontal: 20, width: "100%" },
-  btn_searach: {
+  input_searach_container: { paddingHorizontal: 20, width: "100%" },
+  input_searach: {
     width: "100%",
     backgroundColor: colors.gray,
     borderRadius: 10,

@@ -7,10 +7,12 @@ import { useTranslation } from "react-i18next";
 import Header from "@/components/ui/Header";
 import { colors } from "@/constants/colors";
 import LinearGradientCmp from "@/components/ui/LinearGradientCmp";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function TabLayout() {
   const { t, i18n } = useTranslation();
   const rtl = i18n.language === "ar";
+  const insets = useSafeAreaInsets(); // 👈 gets bottom inset
 
   const tabOrder = ["index", "search", "bag", "notifications", "profile"];
 
@@ -32,14 +34,13 @@ export default function TabLayout() {
       <Tabs
     
         initialRouteName="index"
-        key={i18n.language} // <- add this line
         screenOptions={{
           tabBarActiveTintColor: "gray",
           animation: "shift",
           headerShown: false,
           tabBarStyle: {
             backgroundColor: "transparent",
-            height: 110,
+            height: 100,
             position: Platform.OS === "ios" ? "absolute" : "relative",
             paddingTop: 10,
             flexDirection: rtl ? "row-reverse" : "row", // Add this

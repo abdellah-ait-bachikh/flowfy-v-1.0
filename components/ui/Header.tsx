@@ -1,7 +1,7 @@
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { usePathname, useRouter, useSegments } from "expo-router";
+import { usePathname, useRouter } from "expo-router";
 import { Entypo, MaterialIcons } from "@expo/vector-icons";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/images/flowfy-bg-transparent-croped.png";
@@ -28,12 +28,7 @@ const Header = () => {
     <>
       <StatusBar style="light" translucent />
       <View style={[styles.container, { paddingTop: insets.top }]}>
-        <View
-          style={[
-            styles.wrapper,
-          
-          ]}
-        >
+        <View style={[styles.wrapper]}>
           <View>
             <Pressable
               onPress={handleBack}
@@ -65,7 +60,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     height: 70,
-    paddingHorizontal: 10,flexDirection: "row"
+    paddingHorizontal: 10,
+    flexDirection: "row",
   },
   btn_back: {
     padding: 10,

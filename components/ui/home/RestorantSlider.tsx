@@ -45,8 +45,7 @@ const RestorantSlider = () => {
               </Text>
             </View>
           )}
-          data={restaurantSliderData} 
-       
+          data={restaurantSliderData}
         />
       </View>
     </View>
@@ -57,9 +56,7 @@ export default RestorantSlider;
 
 const styles = StyleSheet.create({
   container: { marginTop: 10 },
-  header: {
-    paddingHorizontal: 15,
-  },
+  header: {},
   header_title: { fontFamily: "SpaceMonoBold" },
   scroll_container: {
     justifyContent: "center",
@@ -83,7 +80,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   text: {
-   
     fontSize: 16,
   },
 });

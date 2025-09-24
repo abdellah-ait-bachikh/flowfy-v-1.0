@@ -6,43 +6,75 @@ import custom_logo from "@/assets/images/icons/custom.png";
 
 export const user = null;
 
-export const cards = [
+export const categories = [
   {
     id: 1,
     name: "restaurant",
-
     image: restaurant_logo,
     href: "restaurant",
   },
   {
     id: 2,
     name: "supermarket",
-
     image: supermarket_logo,
     href: "supermarket",
   },
   {
     id: 3,
-    name: "pharmacy",
-
-    image: pharmacy_logo,
-    href: "pharmacy",
-  },
-  {
-    id: 4,
     name: "custom",
-
     image: custom_logo,
     href: "custom",
   },
-] 
+];
 
 export const restaurantSliderData = [
-  { id: 1, name: "Pokemone", logo: null, adress: "rue hassan 2 hay elmasira ", isOpen: true },
-  { id: 2, name: "Pokemone", logo: null, adress: "rue hassan 2 hay elmasira ", isOpen: true },
-  { id: 3, name: "Pokemone", logo: null, adress: "rue hassan 2 hay elmasira ", isOpen: true },
-  { id: 4, name: "Pokemone", logo: null, adress: "rue hassan 2 hay elmasira ", isOpen: true },
-  { id: 5, name: "Pokemone", logo: null, adress: "rue hassan 2 hay elmasira ", isOpen: true },
-  { id: 6, name: "Pokemone", logo: null, adress: "rue hassan 2 hay elmasira ", isOpen: true },
-  { id: 7, name: "Pokemone", logo: null, adress: "rue hassan 2 hay elmasira ", isOpen: true },
-] ;
+  {
+    id: 1,
+    name: "Pokemone",
+    logo: null,
+    adress: "rue hassan 2 hay elmasira ",
+    isOpen: true,
+  },
+  {
+    id: 2,
+    name: "Pokemone",
+    logo: null,
+    adress: "rue hassan 2 hay elmasira ",
+    isOpen: true,
+  },
+  {
+    id: 3,
+    name: "Pokemone",
+    logo: null,
+    adress: "rue hassan 2 hay elmasira ",
+    isOpen: true,
+  },
+  {
+    id: 4,
+    name: "Pokemone",
+    logo: null,
+    adress: "rue hassan 2 hay elmasira ",
+    isOpen: true,
+  },
+  {
+    id: 5,
+    name: "Pokemone",
+    logo: null,
+    adress: "rue hassan 2 hay elmasira ",
+    isOpen: true,
+  },
+  {
+    id: 6,
+    name: "Pokemone",
+    logo: null,
+    adress: "rue hassan 2 hay elmasira ",
+    isOpen: true,
+  },
+  {
+    id: 7,
+    name: "Pokemone",
+    logo: null,
+    adress: "rue hassan 2 hay elmasira ",
+    isOpen: true,
+  },
+];
