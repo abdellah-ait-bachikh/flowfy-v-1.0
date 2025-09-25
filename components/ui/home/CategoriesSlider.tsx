@@ -24,7 +24,7 @@ const CategoriesSlider = () => {
       <View style={styles.scroll_container}>
         <Carousel
           // loop={true}
-          width={window.width-30}
+          width={window.width - 30}
           height={150}
           pagingEnabled
           snapEnabled
@@ -59,9 +59,6 @@ const CategoriesSlider = () => {
           data={categories}
         />
       </View>
-      <Text>{t(
-                    `screens.(tabs).index.horizontal_categories_scroll.name.${"custom"}`
-                  )}</Text>
     </View>
   );
 };
@@ -71,7 +68,7 @@ export default CategoriesSlider;
 const styles = StyleSheet.create({
   container: { marginTop: 10, gap: 5 },
   header: {},
-  header_title: { fontFamily: "SpaceMonoBold" },
+  header_title: { fontFamily: "SpaceMonoBold", fontSize: 17 },
   scroll_container: {
     // justifyContent: "center",
     // alignItems: "center",
@@ -84,8 +81,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     flexDirection: "row",
     backgroundColor: colors.gray_50,
-    borderWidth: 2,
-    borderColor: colors.gray_100,
+    borderWidth: 1,
+    borderColor: "transparent",
     overflow: "hidden",
     height: 100,
     padding: 10,

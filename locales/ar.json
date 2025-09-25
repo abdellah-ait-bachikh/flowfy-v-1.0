@@ -20,15 +20,23 @@
         "horizontal_categories_scroll": {
           "title": "الفئات",
           "name": {
-            "restaurant": "مطعم",
-            "supermarket": "سوبرماركت",
-            "custom": "مخصص"
+            "restaurant": "مطاعم",
+            "supermarket": "سوبرماركات",
+            "custom": "مخصصات"
           },
           "description": {
-    "restaurant": "وجبات سريعة وماكولات",
+            "restaurant": "وجبات سريعة وماكولات",
             "supermarket": "البقالة، المواد الأساسية، الفواكه والخضروات",
             "custom": "الأدوية ومنتجات الصحة والطلبات المتخصصة"
           }
+        },
+        "horizontal_restaurant_scroll": {
+          "title": "مطاعم",
+                "more": "المزيد",
+                "items":{
+  "offers": "عروض"
+           }
+
         }
       },
       "search": {

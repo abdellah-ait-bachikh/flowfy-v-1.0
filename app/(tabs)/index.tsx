@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
   btn_searach_container: { width: "100%" },
   btn_searach: {
     width: "100%",
-    backgroundColor: colors.gray,
+    backgroundColor: colors.gray_100,
     borderRadius: 10,
   },
   input_search: { paddingHorizontal: 20, fontFamily: "SpaceMonoSemiBold" },

@@ -30,51 +30,65 @@ export const categories = [
 export const restaurantSliderData = [
   {
     id: 1,
-    name: "Pokemone",
+    name: "pokemone",
     logo: null,
+    offers_count: 2,
     adress: "rue hassan 2 hay elmasira ",
-    isOpen: true,
+    rating: 4.6,
+    products_count:30
   },
   {
     id: 2,
-    name: "Pokemone",
+    name: "snack darna",
     logo: null,
+    offers_count: 10,
     adress: "rue hassan 2 hay elmasira ",
-    isOpen: true,
+    rating: 2.0,
+    products_count:15
   },
   {
     id: 3,
-    name: "Pokemone",
+    name: "snack aboanasse",
     logo: null,
+    offers_count: 4,
     adress: "rue hassan 2 hay elmasira ",
-    isOpen: true,
+    rating: 3.5,
+    products_count:12
   },
   {
     id: 4,
-    name: "Pokemone",
+    name: "snak flan flani dhd h dhhdhdd",
     logo: null,
+    offers_count: 1,
     adress: "rue hassan 2 hay elmasira ",
-    isOpen: true,
+    rating: 5,
+    products_count:23
   },
   {
     id: 5,
     name: "Pokemone",
     logo: null,
+    offers_count: 12,
     adress: "rue hassan 2 hay elmasira ",
-    isOpen: true,
+    rating: 2.4,
+    products_count:41
   },
   {
     id: 6,
     name: "Pokemone",
     logo: null,
+    offers_count: 6,
     adress: "rue hassan 2 hay elmasira ",
-    isOpen: true,
+    rating: 3.5,
+    products_count:17
   },
   {
     id: 7,
     name: "Pokemone",
     logo: null,
+    offers_count: 10,
     adress: "rue hassan 2 hay elmasira ",
-    isOpen: true,
+    rating: 4.6,
+    products_count:14
   },
 ];

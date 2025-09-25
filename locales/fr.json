@@ -20,14 +20,21 @@
         "horizontal_categories_scroll": {
           "title": "Catégories",
           "name": {
-            "restaurant": "Restaurant",
-            "supermarket": "Supermarché",
-            "custom": "Commande spéciale"
+            "restaurant": "Restaurants",
+            "supermarket": "Supermarchés",
+            "custom": "Commandes spéciales"
           },
           "description": {
             "restaurant": "Restauration rapide & repas",
             "supermarket": "Épicerie, produits de base, fruits & légumes",
             "custom": "Médicaments, produits de santé & commandes spécialisées"
+          }
+        },
+        "horizontal_restaurant_scroll": {
+          "title": "Restaurants",
+          "more": "Plus",
+          "items": {
+            "offers": "offres"
           }
         }
       },

@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   input_searach_container: { paddingHorizontal: 20, width: "100%" },
   input_searach: {
     width: "100%",
-    backgroundColor: colors.gray,
+    backgroundColor: colors.gray_100,
     borderRadius: 10,
   },
   input_search: { paddingHorizontal: 20 ,fontFamily: "SpaceMonoSemiBold"},

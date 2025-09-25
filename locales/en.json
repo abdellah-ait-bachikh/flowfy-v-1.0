@@ -17,15 +17,21 @@
         "horizontal_categories_scroll": {
           "title": "Categories",
           "name": {
-            "restaurant": "Restaurant",
-            "supermarket": "Supermarket",
-            "custom": "Custom"
+            "restaurant": "Restaurants",
+            "supermarket": "Supermarkets",
+            "custom": "Customs"
           },
           "description": {
             "restaurant": "Fast food & meals",
             "supermarket": "Groceries, staples, fruits & vegetables",
-            "custom": "Medicines , health products & Specialized orders"
+            "custom": "Medicines, health products & specialized orders"
           }
+        },
+        "horizontal_restaurant_scroll": {
+          "title": "Restaurants",
+           "more": "More","items":{
+            "offers":"offers"
+           }
         }
       },
       "search": {
