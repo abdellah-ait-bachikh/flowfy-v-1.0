@@ -35,7 +35,7 @@ export const restaurantSliderData = [
     offers_count: 2,
     adress: "rue hassan 2 hay elmasira ",
     rating: 4.6,
-    products_count:30
+    products_count: 30,
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ export const restaurantSliderData = [
     offers_count: 10,
     adress: "rue hassan 2 hay elmasira ",
     rating: 2.0,
-    products_count:15
+    products_count: 15,
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ export const restaurantSliderData = [
     offers_count: 4,
     adress: "rue hassan 2 hay elmasira ",
     rating: 3.5,
-    products_count:12
+    products_count: 12,
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ export const restaurantSliderData = [
     offers_count: 1,
     adress: "rue hassan 2 hay elmasira ",
     rating: 5,
-    products_count:23
+    products_count: 23,
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ export const restaurantSliderData = [
     offers_count: 12,
     adress: "rue hassan 2 hay elmasira ",
     rating: 2.4,
-    products_count:41
+    products_count: 41,
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ export const restaurantSliderData = [
     offers_count: 6,
     adress: "rue hassan 2 hay elmasira ",
     rating: 3.5,
-    products_count:17
+    products_count: 17,
   },
   {
     id: 7,
@@ -89,6 +89,15 @@ export const restaurantSliderData = [
     offers_count: 10,
     adress: "rue hassan 2 hay elmasira ",
     rating: 4.6,
-    products_count:14
+    products_count: 14,
   },
+];
+
+export const topSnacks = [
+  { id: 1, name: "snack 1", image: null, restaurant: { name: "Pokemone" } },
+  { id: 2, name: "snack 2", image: null, restaurant: { name: "Pokemone" } },
+  { id: 3, name: "snack 3", image: null, restaurant: { name: "Pokemone" } },
+  { id: 4, name: "snack 4", image: null, restaurant: { name: "Pokemone" } },
+  { id: 5, name: "snack 5", image: null, restaurant: { name: "Pokemone" } },
+  { id: 6, name: "snack 6", image: null, restaurant: { name: "Pokemone" } },
 ];

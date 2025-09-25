@@ -2,7 +2,7 @@ import { Image, Pressable, StyleSheet, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { usePathname, useRouter } from "expo-router";
-import { Entypo, MaterialIcons } from "@expo/vector-icons";
+import { Entypo, Feather, MaterialIcons } from "@expo/vector-icons";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/images/flowfy-bg-transparent-croped.png";
 const Header = () => {
@@ -44,8 +44,8 @@ const Header = () => {
             <Image source={logo} style={styles.logo} />
           </View>
           <View>
-            <Pressable onPress={(handleBack) => {}} style={styles.btn_location}>
-              <Entypo name="location" size={25} color="black" />
+            <Pressable onPress={() => {}} style={styles.btn_location}>
+              <Feather name="phone" size={25} color="black" />
             </Pressable>
           </View>
         </View>

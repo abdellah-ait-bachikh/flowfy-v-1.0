@@ -32,11 +32,17 @@
         },
         "horizontal_restaurant_scroll": {
           "title": "مطاعم",
-                "more": "المزيد",
-                "items":{
-  "offers": "عروض"
-           }
-
+          "more": "المزيد",
+          "items": {
+            "offers": "عروض"
+          }
+        },
+        "top_snackes": {
+          "title": "شائع",
+          "more": "المزيد",
+          "items": {
+            "offers": "عروض"
+          }
         }
       },
       "search": {

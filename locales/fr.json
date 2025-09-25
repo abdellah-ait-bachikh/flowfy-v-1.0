@@ -36,7 +36,14 @@
           "items": {
             "offers": "offres"
           }
-        }
+        },"top_snackes": {
+  "title": "Populaire",
+  "more": "Plus",
+  "items": {
+    "offers": "offres"
+  }
+}
+
       },
       "search": {
         "title": "Page de recherche",

@@ -45,8 +45,7 @@ const index = () => {
   const handleChangeLanguage = (lang: string) => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
-    I18nManager.forceRTL(lang==='ar'); // or false
-
+    I18nManager.forceRTL(lang === "ar"); // or false
   };
 
   return (
@@ -57,9 +56,21 @@ const index = () => {
         style={[styles.picker, { top: insets.top }]}
         i18nIsDynamicList
       >
-        <Picker.Item label="English" value="en" style={{fontFamily:"SpaceMonoMedium"}} />
-        <Picker.Item label="Français" value="fr" style={{fontFamily:"SpaceMonoMedium"}} />
-        <Picker.Item label="العربية" value="ar" style={{fontFamily:"SpaceMonoMedium"}} />
+        <Picker.Item
+          label="English"
+          value="en"
+          style={{ fontFamily: "SpaceMonoMedium" }}
+        />
+        <Picker.Item
+          label="Français"
+          value="fr"
+          style={{ fontFamily: "SpaceMonoMedium" }}
+        />
+        <Picker.Item
+          label="العربية"
+          value="ar"
+          style={{ fontFamily: "SpaceMonoMedium" }}
+        />
       </Picker>
 
       <Image

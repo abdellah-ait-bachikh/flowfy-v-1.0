@@ -29,9 +29,17 @@
         },
         "horizontal_restaurant_scroll": {
           "title": "Restaurants",
-           "more": "More","items":{
-            "offers":"offers"
-           }
+          "more": "More",
+          "items": {
+            "offers": "offers"
+          }
+        },
+        "top_snackes": {
+          "title": "Popular",
+          "more": "More",
+          "items": {
+            "offers": "offers"
+          }
         }
       },
       "search": {
