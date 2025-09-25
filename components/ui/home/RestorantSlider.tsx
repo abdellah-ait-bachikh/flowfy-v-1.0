@@ -1,5 +1,5 @@
 import AppText from "@/components/AppText";
-import { colors } from "@/constants/colors";
+import { colors, tailwindColors } from "@/constants/colors";
 import {
   AntDesign,
   FontAwesome,
@@ -200,9 +200,9 @@ function App() {
                     <View
                       style={{
                         flexDirection: "row",
-                        gap: 3,
+                        gap: 10,
                         alignItems: "center",
-                        backgroundColor: colors.red,
+                        backgroundColor: tailwindColors.green[400],
                         borderRadius: 10,
                         paddingVertical: 1,
                         paddingHorizontal: 5,
